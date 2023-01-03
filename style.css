@@ -43,7 +43,8 @@ body {
     font-size: 1.1em;
 }
 
-.container__button__header, .container__button__clipboard {
+.container__button__header, 
+.container__button__clipboard {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -159,6 +160,15 @@ body {
 
 .item__list__footer {
     font-size: 1em;
+    transition: .3s;
+}
+
+.item__list__footer:hover {
+    color: hsl(171, 66%, 44%);
+}
+
+.icon__social {
+    fill: hsl(171, 66%, 44%);
 }
 
 .list__social__footer {
@@ -171,4 +181,96 @@ body {
 
 .icon__social {
     width: 20px;
+}
+
+/*-------------------------------------------*/
+@media only screen and (min-width:900px) {
+    * {
+        font-size: 14px;
+    }
+
+    .container {
+        max-width: 900px;
+    }
+
+    .container__header,
+    .title__snippets,
+    .paragraph__snippets,
+    .title__anywhere,
+    .paragraph__anywhere,
+    .title__clipboard,
+    .paragraph__clipboard {
+        padding: 0 100px;
+    }
+
+    .container__button__header,
+    .container__button__clipboard {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .button__header,
+    .button__clipboard {
+        flex-basis: 200px;
+        margin: 0;
+    }
+
+    .container__article__snippets {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    .img {
+        max-width: 600px;
+    }
+
+    .container__content__snippets__content {
+        text-align: start;
+    }
+
+    .title__item__snippets__content {
+        margin-bottom: 0;
+    }
+
+    .paragraph__item__snippets__content {
+        margin-top: 0;
+    }
+
+    .conteiner__article__content__workflow {
+        display: flex;
+        justify-content: center;
+        gap: 150px;
+    }
+
+    .container__item__workflow {
+        flex-basis: 300px;
+    }
+
+    .list__empresas {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container__footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .logo__footer,
+    .list__social__footer {
+        margin: 0;
+    }
+
+    .list__text__footer {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        justify-items: start;
+        column-gap: 50px;
+        margin-left: -150px;
+    }
 }
