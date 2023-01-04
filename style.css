@@ -63,6 +63,7 @@ body {
 .button__header:hover,
 .button__clipboard:hover {
     border: 2px solid #FFF;
+    cursor: pointer;
 }
 
 .button__ios,
@@ -165,10 +166,7 @@ body {
 
 .item__list__footer:hover {
     color: hsl(171, 66%, 44%);
-}
-
-.icon__social {
-    fill: hsl(171, 66%, 44%);
+    cursor: pointer;
 }
 
 .list__social__footer {
@@ -180,7 +178,13 @@ body {
 }
 
 .icon__social {
-    width: 20px;
+    font-size: 1.5em;
+    transition: .3s;
+}
+
+.icon__social:hover {
+    cursor: pointer;
+    color: hsl(171, 66%, 44%);
 }
 
 /*-------------------------------------------*/
@@ -190,7 +194,7 @@ body {
     }
 
     .container {
-        max-width: 900px;
+        max-width: 1300px;
     }
 
     .container__header,
@@ -200,7 +204,7 @@ body {
     .paragraph__anywhere,
     .title__clipboard,
     .paragraph__clipboard {
-        padding: 0 100px;
+        padding: 0 350px;
     }
 
     .container__button__header,
@@ -218,8 +222,9 @@ body {
     .container__article__snippets {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 50px;
+        justify-content: center;
+        gap: 100px;
+        margin-left: -110px;
     }
 
     .img {
@@ -228,6 +233,7 @@ body {
 
     .container__content__snippets__content {
         text-align: start;
+        flex-basis: 350px;
     }
 
     .title__item__snippets__content {
@@ -258,6 +264,7 @@ body {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        max-width: 100%;
     }
 
     .logo__footer,
@@ -270,7 +277,7 @@ body {
         grid-template-columns: auto auto auto;
         grid-template-rows: auto auto;
         justify-items: start;
-        column-gap: 50px;
+        column-gap: 100px;
         margin-left: -150px;
     }
 }
